@@ -2,7 +2,7 @@
 Kglow Skincare and Spa - Website package
 Files:
 - index.html  --> main website
-- images/your-logo.png  --> logo used in header & popup
+- images/kglow_logo.jpg  --> logo used in header & popup
 
 How to publish on GitHub Pages (phone):
 1. Open GitHub and create a new repository named 'kglowskincareandspa' (Public).
