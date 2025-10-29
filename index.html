@@ -1,108 +1,57 @@
 <!doctype html>
 <html lang="en">
 <head>
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width,initial-scale=1" />
-<title>Kglow Skincare and Spa</title>
-<style>
-:root {
-  --green: #00a65a;
-  --dark: #03643a;
-  --muted: #6b8178;
-  --bg: #ffffff;
-}
-* { box-sizing: border-box; }
-body {
-  font-family: Inter, system-ui, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
-  margin: 0;
-  background: var(--bg);
-  color: var(--dark);
-  -webkit-font-smoothing: antialiased;
-}
-header {
-  background: linear-gradient(90deg, var(--dark), var(--green));
-  color: white;
-  padding: 28px 16px;
-  text-align: center;
-}
-.header-logo {
-  width: 120px;
-  height: auto;
-  border-radius: 12px;
-  background: white;
-  padding: 8px;
-  display: inline-block;
-}
-h1 { margin: 12px 0 6px; font-size: 24px; letter-spacing: 0.2px; }
-.lead { margin: 0; font-size: 15px; opacity: 0.95; }
-.container { max-width: 980px; margin: 18px auto; padding: 0 16px; }
-.section { padding: 22px 0; border-bottom: 1px solid #f0f4f2; }
-h2 { color: var(--dark); margin: 0 0 12px; font-size: 20px; }
-h3 { margin-bottom: 10px; color: var(--dark); }
-.card {
-  background: #fbfffb;
-  border-radius: 12px;
-  padding: 14px;
-  margin-bottom: 16px;
-  border: 1px solid #e7f6ed;
-}
-.service-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; }
-@media(max-width:760px){.service-grid{grid-template-columns:1fr}}
-.price {
-  float: right;
-  background: var(--green);
-  color: white;
-  padding: 6px 10px;
-  border-radius: 8px;
-  font-weight: 600;
-}
-.btn {
-  background: var(--green);
-  color: white;
-  border: none;
-  padding: 10px 16px;
-  border-radius: 10px;
-  font-weight: 600;
-  cursor: pointer;
-}
-.btn:hover { background: #00994d; }
-footer { background: #f7fffb; padding: 18px; text-align: center; color: var(--muted); font-size: 14px; }
-.popup {
-  display: none;
-  position: fixed;
-  inset: 0;
-  background: rgba(0,0,0,0.5);
-  align-items: center;
-  justify-content: center;
-  z-index: 999;
-}
-.popup .box {
-  background: white;
-  padding: 18px;
-  border-radius: 12px;
-  max-width: 420px;
-  width: 90%;
-  text-align: left;
-}
-.input {
-  width: 100%;
-  padding: 10px;
-  border-radius: 8px;
-  border: 1px solid #e6eee8;
-  margin: 8px 0;
-}
-.small { font-size: 13px; color: var(--muted); }
-.note { font-size: 13px; color: var(--muted); margin-top: 8px; }
-img { border-radius: 8px; width: 100%; height: auto; display: block; }
-.book-now { text-align: center; margin-top: 10px; }
-</style>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Kglow Skincare and Spa</title>
+  <style>
+    :root{
+      --green:#00a65a;
+      --dark:#03643a;
+      --muted:#6b8178;
+      --bg:#ffffff;
+    }
+    *{box-sizing:border-box}
+    body{
+      font-family: Inter, system-ui, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+      margin:0;background:var(--bg);color:var(--dark);-webkit-font-smoothing:antialiased;
+    }
+    header{
+      background:linear-gradient(90deg,var(--dark),var(--green));
+      color:white;padding:28px 16px;text-align:center;
+    }
+    .header-logo{width:120px;height:auto;border-radius:12px;background:white;padding:8px;display:inline-block}
+    h1{margin:12px 0 6px;font-size:24px;letter-spacing:0.2px}
+    .lead{margin:0;font-size:15px;opacity:0.95}
+    .container{max-width:980px;margin:18px auto;padding:0 16px}
+    .section{padding:22px 0;border-bottom:1px solid #f0f4f2}
+    h2{color:var(--dark);margin:0 0 12px;font-size:20px}
+    h3{margin-bottom:10px;color:var(--dark)}
+    .card{background:#fbfffb;border-radius:12px;padding:14px;margin-bottom:16px;border:1px solid #e7f6ed}
+    .service-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
+    @media(max-width:760px){.service-grid{grid-template-columns:1fr}}
+    .price{float:right;background:var(--green);color:white;padding:6px 10px;border-radius:8px;font-weight:600}
+    .btn{background:var(--green);color:white;border:none;padding:10px 16px;border-radius:10px;font-weight:600;cursor:pointer}
+    .btn:hover{background:#00994d}
+    footer{background:#f7fffb;padding:18px;text-align:center;color:var(--muted);font-size:14px}
+    .popup{display:none;position:fixed;inset:0;background:rgba(0,0,0,0.55);align-items:center;justify-content:center;z-index:999}
+    .popup .box{background:white;padding:18px;border-radius:12px;max-width:420px;width:92%;text-align:left;box-shadow:0 8px 24px rgba(0,0,0,0.15)}
+    .input{width:100%;padding:10px;border-radius:8px;border:1px solid #e6eee8;margin:8px 0}
+    .small{font-size:13px;color:var(--muted)}
+    .service-img{width:100%;height:170px;object-fit:cover;border-radius:8px;margin-bottom:8px}
+    .service-block{padding:10px}
+    .book-row{display:flex;gap:8px;align-items:center;justify-content:space-between;margin-top:8px}
+    .service-title{display:flex;flex-direction:column;align-items:flex-start}
+    .note{font-size:13px;color:var(--muted);margin-top:8px}
+  </style>
 </head>
 <body>
 
 <header>
   <div style="display:flex;align-items:center;justify-content:center;flex-direction:column;">
     <div class="header-logo">
-      <img src="images/Kglow_logo.jpg.png" alt="Kglow Logo" />
+      <!-- keep your original logo filename -->
+      <img src="images/Kglow_logo.jpg.png" alt="Kglow Logo" style="width:100%;height:auto;display:block;border-radius:8px" />
     </div>
     <h1>Kglow Skincare and Spa</h1>
     <p class="lead">Glow. Relax. Renew your skin with the K Glow experience.</p>
@@ -111,72 +60,168 @@ img { border-radius: 8px; width: 100%; height: auto; display: block; }
 
 <main class="container">
 
-  <!-- About Us -->
-  <section class="section" id="about">
+  <!-- ABOUT (top) -->
+  <section class="section" id="about-top">
     <h2>About Us</h2>
     <div class="card">
       <p>At <strong>K Glow Skincare and Spa</strong>, we specialize in enhancing your natural beauty through professional skincare and relaxation treatments. Our goal is to make every client feel refreshed, confident, and radiant — inside and out.</p>
     </div>
   </section>
 
-  <!-- Services -->
+  <!-- SERVICES -->
   <section class="section" id="services">
     <h2>Our Services</h2>
 
-    <!-- Body Massage -->
+    <!-- BODY MASSAGE -->
     <div class="card">
       <h3>💆‍♀️ Body Massage</h3>
       <div class="service-grid">
         <div>
-          <img src="Swedish-Massage.jpg.jpg" alt="Swedish Massage" />
-          <p><strong>Swedish Massage</strong><br>Relax and relieve stress.<br><span class="small"><strong>₦15,000</strong></span></p>
-          <div class="book-now"><button class="btn" onclick="openPopup('Swedish Massage')">Book Now</button></div>
+          <img class="service-img" src="Swedish-Massage.jpg.jpg" alt="Swedish Massage">
+          <p><strong>Swedish Massage</strong><br><span class="small">Relax and relieve stress and muscle tension.</span></p>
+          <div class="book-row"><strong class="price">₦15,000</strong><button class="btn" onclick="openPopup('Swedish Massage')">Book Now</button></div>
         </div>
+
         <div>
-          <img src="Deep-Tissue-Massage.jpg.jpg" alt="Deep Tissue Massage" />
-          <p><strong>Deep Tissue Massage</strong><br>Targets muscle pain.<br><span class="small"><strong>₦15,000</strong></span></p>
-          <div class="book-now"><button class="btn" onclick="openPopup('Deep Tissue Massage')">Book Now</button></div>
+          <img class="service-img" src="Deep-Tissue-Massage.jpg.jpg" alt="Deep Tissue Massage">
+          <p><strong>Deep Tissue Massage</strong><br><span class="small">Relieve pain from the upper back, neck, and lower back.</span></p>
+          <div class="book-row"><strong class="price">₦15,000</strong><button class="btn" onclick="openPopup('Deep Tissue Massage')">Book Now</button></div>
         </div>
+
+        <div>
+          <img class="service-img" src="Hot-Stone-Massage.jpg.jpg" alt="Hot Stone Massage">
+          <p><strong>Hot Stone Massage</strong><br><span class="small">Uses heated stones to reduce stress and promote sleep.</span></p>
+          <div class="book-row"><strong class="price">₦20,000</strong><button class="btn" onclick="openPopup('Hot Stone Massage')">Book Now</button></div>
+        </div>
+
+        <!-- add any extra massage items here -->
+
       </div>
     </div>
 
-    <!-- Body Wash & Steam -->
+    <!-- BODY WASH & STEAM THERAPY -->
     <div class="card">
       <h3>🧴 Body Wash & Steam Therapy</h3>
       <div class="service-grid">
         <div>
-          <img src="Deep-Hydrating-Wash.jpg.jpg" alt="Deep Hydrating Wash" />
-          <p><strong>Deep Hydrating Wash</strong><br>For dull & dry skin.<br><span class="small"><strong>₦35,000</strong></span></p>
-          <div class="book-now"><button class="btn" onclick="openPopup('Deep Hydrating Wash')">Book Now</button></div>
+          <img class="service-img" src="Deep-Hydrating-Wash.jpg.jpg" alt="Deep Hydrating Wash">
+          <p><strong>Deep Hydrating Wash</strong><br><span class="small">Majority target dull and dry skin — body treatment.</span></p>
+          <div class="book-row"><strong class="price">₦35,000</strong><button class="btn" onclick="openPopup('Deep Hydrating Wash')">Book Now</button></div>
         </div>
+
         <div>
-          <img src="Steam-Therapy-Brightening-Bath.jpg.jpg" alt="Steam Therapy Brightening Bath" />
-          <p><strong>Steam Therapy Brightening Bath</strong><br>Detoxifies and brightens.<br><span class="small"><strong>₦45,000</strong></span></p>
-          <div class="book-now"><button class="btn" onclick="openPopup('Steam Therapy Brightening Bath')">Book Now</button></div>
+          <img class="service-img" src="Ultra-Lighten-Wash.jpg.jpg" alt="Ultra Lighten Wash">
+          <p><strong>Ultra Lighten Wash</strong><br><span class="small">Body polish to remove dead skin cells and improve texture.</span></p>
+          <div class="book-row"><strong class="price">₦40,000</strong><button class="btn" onclick="openPopup('Ultra Lighten Wash')">Book Now</button></div>
+        </div>
+
+        <div>
+          <img class="service-img" src="Steam-Therapy-Brightening-Bath.jpg.jpg" alt="Steam Therapy Brightening Bath">
+          <p><strong>Steam Therapy Brightening Bath</strong><br><span class="small">Detoxifies, brightens and improves complexion.</span></p>
+          <div class="book-row"><strong class="price">₦45,000</strong><button class="btn" onclick="openPopup('Steam Therapy Brightening Bath')">Book Now</button></div>
         </div>
       </div>
     </div>
 
-    <!-- Facials -->
+    <!-- MANICURE & PEDICURE -->
+    <div class="card">
+      <h3>💅 Manicure & Pedicure</h3>
+      <div class="service-grid">
+        <div>
+          <img class="service-img" src="Classic-Leg-Wash.jpg.jpg" alt="Classic Leg Wash">
+          <p><strong>Classic Leg Wash</strong><br><span class="small">Unravel cracked feet and reduce calluses.</span></p>
+          <div class="book-row"><strong class="price">₦7,000</strong><button class="btn" onclick="openPopup('Classic Leg Wash')">Book Now</button></div>
+        </div>
+
+        <div>
+          <img class="service-img" src="Jelly-Pedicure.jpg.jpg" alt="Jelly Pedicure">
+          <p><strong>Jelly Pedicure</strong><br><span class="small">Hydrating pedicure for dry or hard feet.</span></p>
+          <div class="book-row"><strong class="price">₦10,000</strong><button class="btn" onclick="openPopup('Jelly Pedicure')">Book Now</button></div>
+        </div>
+
+        <div>
+          <img class="service-img" src="Margarita-Leg-Wash.jpg.jpg" alt="Margarita Leg Wash">
+          <p><strong>Margarita Leg Wash</strong><br><span class="small">Helps dissolve pollutants causing darker feet and hands.</span></p>
+          <div class="book-row"><strong class="price">₦15,000</strong><button class="btn" onclick="openPopup('Margarita Leg Wash')">Book Now</button></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- TEETH WHITENING -->
+    <div class="card">
+      <h3>😁 Teeth Whitening & Care</h3>
+      <div class="service-grid">
+        <div>
+          <img class="service-img" src="Teeth-Whitening-Per-Session.jpg.jpg" alt="Teeth Whitening">
+          <p><strong>Teeth Whitening (Per Session)</strong><br><span class="small">Quick whitening session.</span></p>
+          <div class="book-row"><strong class="price">₦20,000</strong><button class="btn" onclick="openPopup('Teeth Whitening (Per Session)')">Book Now</button></div>
+        </div>
+
+        <div>
+          <img class="service-img" src="Diamond-Whitening.jpg.jpg" alt="Diamond Whitening">
+          <p><strong>Diamond Whitening</strong><br><span class="small">8–10 shades whiter — 60 minutes.</span></p>
+          <div class="book-row"><strong class="price">₦40,000</strong><button class="btn" onclick="openPopup('Diamond Whitening')">Book Now</button></div>
+        </div>
+
+        <div>
+          <img class="service-img" src="Deep-Teeth-Cleaning.jpg.jpg" alt="Deep Teeth Cleaning">
+          <p><strong>Deep Teeth Cleaning</strong><br><span class="small">Calculus removal — 90 minutes.</span></p>
+          <div class="book-row"><strong class="price">₦60,000</strong><button class="btn" onclick="openPopup('Deep Teeth Cleaning')">Book Now</button></div>
+        </div>
+
+        <div>
+          <img class="service-img" src="Platinum-Whitening.jpg.jpg" alt="Platinum Whitening">
+          <p><strong>Platinum Whitening</strong><br><span class="small">10–20 shades whiter — 90 minutes.</span></p>
+          <div class="book-row"><strong class="price">₦60,000</strong><button class="btn" onclick="openPopup('Platinum Whitening')">Book Now</button></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- FACIALS -->
     <div class="card">
       <h3>💆‍♀️ Facials</h3>
       <div class="service-grid">
         <div>
-          <img src="Classic-Facial.jpg.jpg" alt="Classic Facial" />
-          <p><strong>Classic Facial</strong><br>Perfect for beginners.<br><span class="small"><strong>₦10,000</strong></span></p>
-          <div class="book-now"><button class="btn" onclick="openPopup('Classic Facial')">Book Now</button></div>
+          <img class="service-img" src="Classic-Facial.jpg.jpg" alt="Classic Facial">
+          <p><strong>Classic Facial</strong><br><span class="small">Excellent for beginners.</span></p>
+          <div class="book-row"><strong class="price">₦10,000</strong><button class="btn" onclick="openPopup('Classic Facial')">Book Now</button></div>
         </div>
+
         <div>
-          <img src="Deep-Cleansing-Facials.jpg.jpg" alt="Deep Cleansing Facial" />
-          <p><strong>Deep Cleansing Facial</strong><br>Removes blackheads.<br><span class="small"><strong>₦18,000</strong></span></p>
-          <div class="book-now"><button class="btn" onclick="openPopup('Deep Cleansing Facial')">Book Now</button></div>
+          <img class="service-img" src="LED-Therapy-Facial.jpg.jpg" alt="LED Therapy Facial">
+          <p><strong>LED Therapy Facial</strong><br><span class="small">Addresses dryness & dullness.</span></p>
+          <div class="book-row"><strong class="price">₦15,000</strong><button class="btn" onclick="openPopup('LED Therapy Facial')">Book Now</button></div>
+        </div>
+
+        <div>
+          <img class="service-img" src="Dermaplanning-facials.jpg.jpg" alt="Dermaplaning Facial">
+          <p><strong>Dermaplaning Facial</strong><br><span class="small">Removes unwanted facial hair & smooths skin.</span></p>
+          <div class="book-row"><strong class="price">₦17,000</strong><button class="btn" onclick="openPopup('Dermaplaning Facial')">Book Now</button></div>
+        </div>
+
+        <div>
+          <img class="service-img" src="Vampire-Infusion-Facial.jpg.jpg" alt="Vampire Infusion Facial">
+          <p><strong>Vampire Infusion Facial</strong><br><span class="small">Improve elasticity & texture.</span></p>
+          <div class="book-row"><strong class="price">₦17,000</strong><button class="btn" onclick="openPopup('Vampire Infusion Facial')">Book Now</button></div>
+        </div>
+
+        <div>
+          <img class="service-img" src="Micro-Needing-Facials.jpg.jpg" alt="Micro Needling Facial">
+          <p><strong>Micro Needling Facial</strong><br><span class="small">Treats uneven skin tone & texture.</span></p>
+          <div class="book-row"><strong class="price">₦17,000</strong><button class="btn" onclick="openPopup('Micro Needling Facial')">Book Now</button></div>
+        </div>
+
+        <div>
+          <img class="service-img" src="Deep-Cleansing-Facials.jpg.jpg" alt="Deep Cleansing Facial">
+          <p><strong>Deep Cleansing Facial</strong><br><span class="small">For clogged pores, blackheads & dull skin.</span></p>
+          <div class="book-row"><strong class="price">₦18,000</strong><button class="btn" onclick="openPopup('Deep Cleansing Facial')">Book Now</button></div>
         </div>
       </div>
     </div>
 
   </section>
 
-  <!-- Contact -->
+  <!-- CONTACT -->
   <section class="section" id="contact">
     <h2>Contact & Hours</h2>
     <div class="card">
@@ -186,45 +231,90 @@ img { border-radius: 8px; width: 100%; height: auto; display: block; }
     </div>
   </section>
 
-  <footer>
-    <p>© 2025 Kglow Skincare and Spa</p>
-  </footer>
+  <!-- About (bottom copy for balance) -->
+  <section class="section" id="about-bottom">
+    <h2>About Us (Again)</h2>
+    <div class="card">
+      <p>At <strong>K Glow Skincare and Spa</strong>, we deliver personalized, professional skincare and spa treatments to help you look and feel your best. Book today and experience the K Glow difference.</p>
+    </div>
+  </section>
+
+  <section style="padding:18px 0;text-align:center">
+    <p class="small">© 2025 K Glow Skincare and Spa</p>
+  </section>
 
 </main>
 
-<!-- Popup -->
-<div class="popup" id="paymentPopup">
-  <div class="box">
-    <h3 style="text-align:center;">Payment Details</h3>
-    <p><strong>Bank:</strong> Access Bank<br>
-    <strong>Account Name:</strong> Ajibola Kafayat Olajumoke<br>
-    <strong>Account Number:</strong> 1224510234</p>
-    <p class="note">After making payment, kindly click below to confirm on WhatsApp.</p>
-    <input class="input" id="clientName" placeholder="Your full name">
-    <input class="input" id="serviceName" placeholder="Service paid for">
-    <div style="display:flex;gap:8px;justify-content:center;margin-top:12px;">
-      <button class="btn" onclick="continueToWhatsApp()">I’ve Made Payment</button>
-      <button class="btn" style="background:#ccc;color:#000" onclick="closePopup()">Close</button>
+<!-- PAYMENT POPUP -->
+<div class="popup" id="paymentPopup" role="dialog" aria-hidden="true">
+  <div class="box" role="document">
+    <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:6px">
+      <div style="display:flex;align-items:center;gap:12px">
+        <img src="images/Kglow_logo.jpg.png" alt="logo" style="width:72px;height:auto;border-radius:8px;display:block" />
+        <div>
+          <strong style="color:var(--dark)">Payment Instructions</strong>
+        </div>
+      </div>
+      <div>
+        <button onclick="closePopup()" style="background:transparent;border:none;font-size:22px;color:#666;cursor:pointer">&times;</button>
+      </div>
     </div>
+
+    <p class="small">Make payment to the account below, then forward your payment receipt/screenshot and the service name to WhatsApp to confirm your booking date.</p>
+
+    <p style="margin-top:8px"><strong>Bank:</strong> Access Bank<br>
+    <strong>Account Name:</strong> AJIBOLA Kafayat OLAJUMOKE<br>
+    <strong>Account Number:</strong> 1224510234</p>
+
+    <input class="input" id="payerName" placeholder="Your full name (for booking)" />
+    <input class="input" id="payerService" placeholder="Service you paid for (auto-filled)" />
+
+    <div style="text-align:center;margin-top:12px">
+      <button id="confirmBtn" class="btn" onclick="confirmPayment()">I’ve Made Payment — Send Receipt</button>
+    </div>
+
+    <p class="note">Please ensure your receipt is clear. All payments are non-refundable. Reschedule with at least 24 hours' notice.</p>
   </div>
 </div>
 
+<footer>
+  <p style="margin:6px 0">Contact us: 08107380633 | Instagram: k_glowskincare_spa</p>
+</footer>
+
 <script>
-let selectedService = "";
-function openPopup(service){
-  selectedService = service;
-  document.getElementById('paymentPopup').style.display='flex';
-}
-function closePopup(){
-  document.getElementById('paymentPopup').style.display='none';
-}
-function continueToWhatsApp(){
-  const name = document.getElementById('clientName').value || '---';
-  const service = selectedService || document.getElementById('serviceName').value || 'unspecified service';
-  const msg = `Hello Kglow Skincare & Spa 🌿, my name is ${name}. I just made payment for ${service}. Kindly confirm my booking.`;
-  const url = 'https://wa.me/2348107380633?text=' + encodeURIComponent(msg);
-  window.open(url,'_blank');
-}
+  let currentService = '';
+
+  function openPopup(service) {
+    currentService = service || '';
+    document.getElementById('paymentPopup').style.display = 'flex';
+    // autofill service field
+    const svcField = document.getElementById('payerService');
+    if(svcField) svcField.value = currentService;
+    // clear name field
+    const nameField = document.getElementById('payerName');
+    if(nameField) nameField.value = '';
+    // set focus to name for quick entry on mobile
+    if(nameField) setTimeout(()=>nameField.focus(), 200);
+  }
+
+  function closePopup() {
+    document.getElementById('paymentPopup').style.display = 'none';
+  }
+
+  function confirmPayment() {
+    const name = document.getElementById('payerName').value.trim() || '[Your Name]';
+    const service = (document.getElementById('payerService').value.trim() || currentService || '[Service]');
+    // message to WhatsApp
+    const message = `Hello Kglow Skincare & Spa 🌿, my name is ${name}. I just made payment for ${service}. Here's my payment receipt. Kindly confirm my booking date.`;
+    const waUrl = 'https://wa.me/2348107380633?text=' + encodeURIComponent(message);
+    // open WhatsApp in new tab
+    window.open(waUrl, '_blank');
+  }
+
+  // close popup on ESC
+  document.addEventListener('keydown', function(e){
+    if(e.key === 'Escape') closePopup();
+  });
 </script>
 
 </body>
